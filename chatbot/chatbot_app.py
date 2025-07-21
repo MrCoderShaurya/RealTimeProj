@@ -12,7 +12,7 @@ st.markdown("<p style='text-align: center; color: gray;'>Ask me anything. I’m 
 st.markdown("---")
 
 # --- Cohere API Client ---
-co = cohere.Client("7Hd3Jez1t0ihz2dhQkZn5iwYuicba73vQhsky0Hy")  # Replace with your API Key
+co = cohere.Client("***")  # Replace with your API Key
 
 # --- USER INPUT BOX ---
 user_msg = st.text_input("💬 Your Question:", placeholder="Type your question here...")
