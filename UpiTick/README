@@ -1,0 +1,41 @@
+💸 UPI Fraud Detection
+A web app to detect fraudulent UPI transactions using Flask, NumPy, Pandas, Matplotlib, and Seaborn.
+________________________________________
+📊 Features
+•	✅ Detect fraud in real-time
+•	📈 Data visualization with Matplotlib & Seaborn
+•	🌐 Simple web interface with Flask
+________________________________________
+🗂 Dataset
+From Kaggle: Fraud Detection Dataset
+•	Labeled UPI transactions: fraudulent or legitimate
+________________________________________
+🛠 Tech
+•	Python 3.x
+•	Flask
+•	NumPy, Pandas
+•	Matplotlib, Seaborn
+•	Scikit-learn (optional)
+________________________________________
+🚀 Installation
+git clone <repo-url>
+cd upi-fraud-detection
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+pip install -r requirements.txt
+Place the dataset in data/ folder.
+________________________________________
+🖥 Usage
+python app.py
+Open browser → http://127.0.0.1:5000/
+Enter transaction details → Get prediction ✅
+________________________________________
+📁 Structure
+upi-fraud-detection/
+├── app.py
+├── templates/
+├── static/
+├── data/
+└── model/
+
