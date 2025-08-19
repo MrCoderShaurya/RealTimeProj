@@ -77,7 +77,7 @@ html_template = """
 </head>
 <body>
     <div class="container">
-        <h1>Fraud Detection App</h1>
+        <h1>UpiTick</h1>
         <form method="POST">
             <label>Transaction Type</label>
             <select name="transaction_type">
@@ -143,3 +143,4 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
