@@ -100,10 +100,11 @@ html_template = """
         </form>
 
         {% if prediction is not none %}
-            <div class="result {% if prediction == 1 %}error{% else %}success{% endif %}">
-                Prediction: {{ prediction }} - 
-                {% if prediction == 1 %} This Transaction may be FRAUD {% else %} This Transaction is SAFE {% endif %}
-            </div>
+    <div class="result {% if prediction == 1 %}error{% else %}success{% endif %}">
+        {% if prediction == 1 %}
+            🚨 {{ "%.2f"|format(fraud_probability*100) }}% chance of FRAUD
+        {% else %}
+            ✅ {{ "%.2f"|format((1-fraud_probability)*100) }}% chance of being SAFE
         {% endif %}
     </div>
 </body>
@@ -135,6 +136,8 @@ def home():
 
             # Prediction
             prediction = int(model.predict(input_data)[0])
+            fraud_probability = probabilities[1]  # Probability of fraud (class 1)
+            prediction = 1 if fraud_probability > 0.5 else 0
 
         except Exception as e:
             prediction = f"Error: {e}"
@@ -143,4 +146,5 @@ def home():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
