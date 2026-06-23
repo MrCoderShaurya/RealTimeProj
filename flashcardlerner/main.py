@@ -1,6 +1,6 @@
 import tkinter as tk
 import random
-
+print("hello world")
 # Define FlashCard class
 class FlashCard:
     def __init__(self, term, definition):
